@@ -1,3 +1,4 @@
+import Forms from "../components/Form/Forms";
 import ProgressBar from "../components/ProgressBar/ProgressBar";
 
 const SubmissionForm = () => {
@@ -8,6 +9,7 @@ const SubmissionForm = () => {
           Submission Form
         </h1>
         <ProgressBar />
+        <Forms />
       </div>
     </div>
   );
