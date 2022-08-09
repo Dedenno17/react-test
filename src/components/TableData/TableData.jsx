@@ -9,16 +9,16 @@ const TableData = () => {
     <div className="w-full">
       <table className="border-collapse w-full">
         <tr>
-          <th className="border-[1px] border-[#ddd] py-3 px-2 text-center bg-grey text-slate-100 w-[120px]">
+          <th className="border-[1px] border-[#ddd] py-3 px-2 text-center bg-grey text-slate-100 w-[20%]">
             ID No.
           </th>
-          <th className="border-[1px] border-[#ddd] py-3 px-2 text-center bg-grey text-slate-100 w-[170px]">
+          <th className="border-[1px] border-[#ddd] py-3 px-2 text-center bg-grey text-slate-100 w-[30%]">
             Nama
           </th>
-          <th className="border-[1px] border-[#ddd] py-3 px-2 text-center bg-grey text-slate-100">
+          <th className="border-[1px] border-[#ddd] py-3 px-2 text-center bg-grey text-slate-100 w-[35%]">
             Alamat
           </th>
-          <th className="border-[1px] border-[#ddd] py-3 px-2 text-center bg-grey text-slate-100 w-[80px]"></th>
+          <th className="border-[1px] border-[#ddd] py-3 px-2 text-center bg-grey text-slate-100 w-[15%]"></th>
         </tr>
         {DUMMY__DATA.map((item, i) => (
           <tr
