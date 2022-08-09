@@ -9,22 +9,24 @@ const TableData = () => {
     <div className="w-[790px]">
       <table className="border-collapse w-full">
         <tr>
-          <th className="border-[1px] border-[#ddd] py-3 px-2 text-left bg-tosca text-slate-100 w-[120px]">
+          <th className="border-[1px] border-[#ddd] py-3 px-2 text-center bg-grey text-slate-100 w-[120px]">
             ID No.
           </th>
-          <th className="border-[1px] border-[#ddd] py-3 px-2 text-left bg-tosca text-slate-100 w-[170px]">
+          <th className="border-[1px] border-[#ddd] py-3 px-2 text-center bg-grey text-slate-100 w-[170px]">
             Nama
           </th>
-          <th className="border-[1px] border-[#ddd] py-3 px-2 text-left bg-tosca text-slate-100">
+          <th className="border-[1px] border-[#ddd] py-3 px-2 text-center bg-grey text-slate-100">
             Alamat
           </th>
-          <th className="border-[1px] border-[#ddd] py-3 px-2 text-left bg-tosca text-slate-100 w-[80px]"></th>
+          <th className="border-[1px] border-[#ddd] py-3 px-2 text-center bg-grey text-slate-100 w-[80px]"></th>
         </tr>
         {DUMMY__DATA.map((item, i) => (
           <tr
             key={item.id}
             className={
-              i % 2 === 0 ? "bg-[#f2f2f2] hover:bg-[#ddd]" : "hover:bg-[#ddd]"
+              i % 2 === 0
+                ? "bg-[#f2f2f2] hover:bg-[#ddd]"
+                : "bg-slate-100 hover:bg-[#ddd]"
             }
           >
             <td className="border-[1px] border-[#ddd] p-2">{item.id}</td>

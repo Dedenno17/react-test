@@ -5,7 +5,7 @@ import SubmissionForm from "./pages/SubmissionForm";
 function App() {
   return (
     <BrowserRouter>
-      <div>
+      <div className="bg-gradient-to-b from-tosca to-blue">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/add" element={<SubmissionForm />} />
