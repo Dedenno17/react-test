@@ -1,11 +1,17 @@
+import { Route, Routes, BrowserRouter } from "react-router-dom";
+import Home from "./pages/Home";
+import SubmissionForm from "./pages/SubmissionForm";
+
 function App() {
   return (
-    <div>
-      <p className="text-6xl text-darkBlue font-bold">Hello Reactjs</p>
-      <i class="fa-solid fa-eye text-4xl"></i>
-      <i class="fa-solid fa-eye-slash"></i>
-      <i class="fa-regular fa-circle-check text-tosca"></i>
-    </div>
+    <BrowserRouter>
+      <div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/add" element={<SubmissionForm />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
