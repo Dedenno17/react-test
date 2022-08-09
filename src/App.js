@@ -1,7 +1,7 @@
 function App() {
   return (
     <div>
-      <p className="text-xl text-blue-400">Hello Reactjs</p>
+      <p className="text-6xl text-darkBlue font-bold">Hello Reactjs</p>
     </div>
   );
 }
