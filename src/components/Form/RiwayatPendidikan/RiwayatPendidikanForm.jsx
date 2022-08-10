@@ -1,10 +1,9 @@
 import InputText from "../../UI/InputText";
 import SelectOption from "../../UI/SelectOption";
-import Button from "../../UI/Button";
 
 const RiwayatPendidikanForm = (props) => {
   return (
-    <form className="w-full">
+    <div className="w-full mb-10">
       <div>
         <InputText
           id="institusi"
@@ -58,12 +57,7 @@ const RiwayatPendidikanForm = (props) => {
         </div>
         <InputText id="program" label="Jurusuan / Program Studi" type="text" />
       </div>
-      <div className="w-full mt-8">
-        <Button className="w-full bg-tosca text-grey" type="submit">
-          Next
-        </Button>
-      </div>
-    </form>
+    </div>
   );
 };
 
