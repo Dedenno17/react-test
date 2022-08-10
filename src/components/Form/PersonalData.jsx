@@ -75,7 +75,9 @@ const PersonalData = () => {
         </div>
         <InputText id="kewarganegaraan" label="Kewarganegaraan" type="text" />
         <div className="w-full mt-8">
-          <Button className="w-full bg-tosca text-grey">Next</Button>
+          <Button className="w-full bg-tosca text-grey" type="submit">
+            Next
+          </Button>
         </div>
       </form>
     </div>

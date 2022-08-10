@@ -1,6 +1,8 @@
 const InputText = (props) => {
+  const style = `mb-3 ${props.className}`;
+
   return (
-    <div className="w-full mb-3">
+    <div className={style}>
       <label htmlFor={props.id} className="text-slate-100 font-light">
         {props.label}
       </label>
