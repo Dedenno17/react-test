@@ -1,5 +1,5 @@
 import PersonalData from "./PersonalData";
-import RiwayatPendidikan from "./RiwayatPendidikan";
+import RiwayatPendidikan from "./RiwayatPendidikan/RiwayatPendidikan";
 
 const Forms = () => {
   return (
