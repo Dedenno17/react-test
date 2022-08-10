@@ -1,5 +1,11 @@
+import PersonalData from "./PersonalData";
+
 const Forms = () => {
-  return <div className="px-2 py-4 border-[1px] border-slate-100 mt-10"></div>;
+  return (
+    <div className="w-full mt-14">
+      <PersonalData />
+    </div>
+  );
 };
 
 export default Forms;
