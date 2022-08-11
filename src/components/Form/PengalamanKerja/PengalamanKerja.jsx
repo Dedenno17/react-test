@@ -20,7 +20,7 @@ const PengalamanKerja = () => {
         Pengalaman Kerja
       </h2>
       <form className="w-full" onSubmit={nextButtonHandler}>
-        <div className="w-full">
+        <div className="w-full lg:flex lg:justify-between lg:items-center">
           <PengalamanKerjaForm />
           <AddLayout />
         </div>

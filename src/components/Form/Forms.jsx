@@ -19,8 +19,6 @@ const Forms = () => {
       <Keahlian />
     );
 
-  console.log(formPage);
-
   return <div className="w-full mt-14">{content}</div>;
 };
 
