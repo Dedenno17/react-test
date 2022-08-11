@@ -10,7 +10,7 @@ const TableData = () => {
       <table className="border-collapse w-full">
         <thead>
           <tr>
-            <th className="border-[1px] border-[#ddd] py-3 px-2 text-center bg-grey text-slate-100 w-[20%]">
+            <th className="border-[1px] border-[#ddd] py-3 px-2 text-center bg-grey text-slate-100 w-[20%] md:w-[15%]">
               ID No.
             </th>
             <th className="border-[1px] border-[#ddd] py-3 px-2 text-center bg-grey text-slate-100 w-[30%]">
