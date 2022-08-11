@@ -2,6 +2,9 @@ import InputText from "../../UI/InputText";
 import RadioButton from "../../UI/RadioButton";
 import SelectOption from "../../UI/SelectOption";
 import TextArea from "../../UI/TextArea";
+import { hari } from "../../../data/hari";
+import { bulan } from "../../../data/bulan";
+import { tahun } from "../../../data/tahun";
 
 const PersonalDataForm = (props) => {
   return (
@@ -35,19 +38,19 @@ const PersonalDataForm = (props) => {
               className="w-[30%]"
               name="hariLhr"
               label="Hari"
-              options={["1", "2", "3"]}
+              options={hari}
             />
             <SelectOption
               className="w-[30%]"
               name="bulanLhr"
               label="Bulan"
-              options={["Januari", "Februari", "Maret"]}
+              options={bulan}
             />
             <SelectOption
               className="w-[30%]"
               name="tahunLhr"
               label="Tahun"
-              options={["2020", "2021", "2022"]}
+              options={tahun}
             />
           </div>
         </div>
