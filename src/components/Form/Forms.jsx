@@ -7,8 +7,8 @@ const Forms = () => {
   return (
     <div className="w-full mt-14">
       {/* <PersonalData /> */}
-      <RiwayatPendidikan />
-      {/* <PengalamanKerja /> */}
+      {/* <RiwayatPendidikan /> */}
+      <PengalamanKerja />
       {/* <Keahlian /> */}
     </div>
   );

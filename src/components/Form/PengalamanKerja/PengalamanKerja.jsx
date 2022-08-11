@@ -11,8 +11,11 @@ const PengalamanKerja = () => {
       <form className="w-full">
         <PengalamanKerjaForm />
         <AddLayout />
-        <div className="mt-8">
-          <Button className="bg-tosca w-full text-slate-100" typw="submit">
+        <div className="mt-8 lg:flex lg:justify-end lg:items-center">
+          <Button
+            className="bg-tosca w-full text-slate-100 lg:w-[20%]"
+            typw="submit"
+          >
             Next
           </Button>
         </div>
