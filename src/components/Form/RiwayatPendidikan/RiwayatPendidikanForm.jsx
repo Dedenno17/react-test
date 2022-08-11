@@ -3,7 +3,7 @@ import SelectOption from "../../UI/SelectOption";
 
 const RiwayatPendidikanForm = (props) => {
   return (
-    <div className="w-full mb-10">
+    <div className="w-full mb-10 lg:mb-0 lg:w-[46.5%]">
       <div>
         <InputText
           id="institusi"

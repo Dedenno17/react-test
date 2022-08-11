@@ -4,7 +4,7 @@ import TextArea from "../../UI/TextArea";
 
 const PengalamanKerjaForm = (props) => {
   return (
-    <div className="w-full mb-10">
+    <div className="w-full mb-10 ">
       <InputText id="posisi" label="Posisi" type="text" />
       <InputText id="perusahaan" label="Nama Perusahaan" type="text" />
       <div className="w-full mb-3">

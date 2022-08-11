@@ -3,7 +3,7 @@ import ProgressBar from "../components/ProgressBar/ProgressBar";
 
 const SubmissionForm = () => {
   return (
-    <div className="w-full min-h-[100vh] px-4 py-12 max-w-[800px] mx-auto">
+    <div className="w-full min-h-[100vh] px-4 py-12 max-w-[1024px] mx-auto">
       <div className="p-8 bg-grey rounded-md">
         <h1 className="text-center text-4xl font-bold text-slate-100 mb-10">
           Submission Form

@@ -1,9 +1,18 @@
+import { useDispatch } from "react-redux";
+
 import Button from "../../UI/Button";
 import KeahlianList from "./KeahlianList";
+import { formToShowActions } from "../../../features/formToShow-slice";
 
 const DUMMY__DATA = ["Javscript", "HTML", "CSS"];
 
 const Keahlian = () => {
+  const dispatch = useDispatch();
+
+  const nextButtonHandler = () => {
+    dispatch(formToShowActions.resetForm());
+  };
+
   return (
     <div>
       <h2 className="text-left text-2xl font-medium text-slate-100 mb-5">
@@ -27,8 +36,9 @@ const Keahlian = () => {
       <KeahlianList data={DUMMY__DATA} />
       <div className="mt-8 lg:flex lg:justify-end lg:items-center">
         <Button
-          className="bg-tosca w-full text-slate-100 lg:w-[20%]"
-          typw="button"
+          className="bg-tosca w-full text-grey lg:w-[20%]"
+          type="button"
+          onClick={nextButtonHandler}
         >
           Submit
         </Button>

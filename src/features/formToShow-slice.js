@@ -11,7 +11,7 @@ export const formToShowSlice = createSlice({
     },
 
     resetForm: (state) => {
-      state.formPage = 0;
+      state.formPage = initialStateValue.formPage;
     },
   },
 });
