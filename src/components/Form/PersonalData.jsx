@@ -2,6 +2,7 @@ import Button from "../UI/Button";
 import InputText from "../UI/InputText";
 import RadioButton from "../UI/RadioButton";
 import SelectOption from "../UI/SelectOption";
+import TextArea from "../UI/TextArea";
 
 const PersonalData = () => {
   return (
@@ -58,17 +59,7 @@ const PersonalData = () => {
             label="Perempuan"
           />
         </div>
-        <div className="flex flex-col mb-3">
-          <label htmlFor="alamat" className="text-slate-100 font-light mb-3">
-            Alamat
-          </label>
-          <textarea
-            id="alamat"
-            cols="20"
-            rows="5"
-            className="w-full p-3 rounded-md"
-          ></textarea>
-        </div>
+        <TextArea id="alamat" label="Alamat" />
         <div className="w-full mb-3">
           <InputText id="kecamatan" label="Kecamatan" type="text" />
           <InputText id="kota" label="Kota" type="text" />
