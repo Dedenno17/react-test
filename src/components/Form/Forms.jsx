@@ -8,8 +8,8 @@ const Forms = () => {
     <div className="w-full mt-14">
       {/* <PersonalData /> */}
       {/* <RiwayatPendidikan /> */}
-      <PengalamanKerja />
-      {/* <Keahlian /> */}
+      {/* <PengalamanKerja /> */}
+      <Keahlian />
     </div>
   );
 };
