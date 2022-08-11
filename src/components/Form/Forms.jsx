@@ -6,7 +6,7 @@ import RiwayatPendidikan from "./RiwayatPendidikan/RiwayatPendidikan";
 import Keahlian from "./Keahlian/Keahlian";
 
 const Forms = () => {
-  const formPage = useSelector((state) => state.formToShow.formPage);
+  const formPage = useSelector((state) => state.formToShow.form.page);
 
   let content =
     formPage === 1 ? (
