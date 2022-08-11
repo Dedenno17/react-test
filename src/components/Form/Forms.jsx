@@ -1,5 +1,5 @@
 import PengalamanKerja from "./PengalamanKerja/PengalamanKerja";
-import PersonalData from "./PersonalData";
+import PersonalData from "./PersonalData/PersonalData";
 import RiwayatPendidikan from "./RiwayatPendidikan/RiwayatPendidikan";
 import Keahlian from "./Keahlian/Keahlian";
 
