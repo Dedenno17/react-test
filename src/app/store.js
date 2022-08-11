@@ -1,7 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 
+// reducers
+import formToShowReducer from "../features/formToShow-slice";
+
 const Store = configureStore({
-  reducer: {},
+  reducer: {
+    formToShow: formToShowReducer,
+  },
 });
 
 export default Store;
