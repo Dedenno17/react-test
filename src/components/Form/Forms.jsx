@@ -6,8 +6,8 @@ import Keahlian from "./Keahlian/Keahlian";
 const Forms = () => {
   return (
     <div className="w-full mt-14">
-      <PersonalData />
-      {/* <RiwayatPendidikan /> */}
+      {/* <PersonalData /> */}
+      <RiwayatPendidikan />
       {/* <PengalamanKerja /> */}
       {/* <Keahlian /> */}
     </div>
