@@ -9,8 +9,11 @@ const PersonalData = () => {
       </h2>
       <form className="w-full">
         <PersonalDataForm />
-        <div className="w-full mt-8">
-          <Button className="w-full bg-tosca text-grey" type="submit">
+        <div className="w-full mt-8 lg:flex lg:justify-end lg:items-center">
+          <Button
+            className="w-full bg-tosca text-grey lg:w-[20%] hover:brightness-95"
+            type="submit"
+          >
             Next
           </Button>
         </div>

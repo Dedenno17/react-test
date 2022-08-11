@@ -6,14 +6,29 @@ import TextArea from "../../UI/TextArea";
 const PersonalDataForm = (props) => {
   return (
     <div className="w-full">
-      <div className="w-full mb-3">
-        <InputText id="namaD" label="Nama Depan" type="text" />
-        <InputText id="namaB" label="Nama Belakang" type="text" />
+      <div className="w-full mb-3 lg:flex justify-between items-center">
+        <InputText
+          id="namaD"
+          label="Nama Depan"
+          type="text"
+          className=" w-full lg:w-[46.5%]"
+        />
+        <InputText
+          id="namaB"
+          label="Nama Belakang"
+          type="text"
+          className="w-full lg:w-[46.5%]"
+        />
       </div>
       <InputText id="email" label="Email" type="email" />
-      <div className="w-full mb-4">
-        <InputText id="tempatLhr" label="Tempat Lahir" type="text" />
-        <div className="w-full">
+      <div className="w-full mb-4 lg:flex lg:justify-between lg:items-center">
+        <InputText
+          id="tempatLhr"
+          label="Tempat Lahir"
+          type="text"
+          className="lg:w-[30%] lg:mb-0"
+        />
+        <div className="w-full lg:w-[60%]">
           <p className="text-slate-100 font-light mb-3">Tanggal Lahir</p>
           <div className="w-full  flex justify-between">
             <SelectOption
@@ -55,9 +70,19 @@ const PersonalDataForm = (props) => {
         />
       </div>
       <TextArea id="alamat" label="Alamat" />
-      <div className="w-full mb-3">
-        <InputText id="kecamatan" label="Kecamatan" type="text" />
-        <InputText id="kota" label="Kota" type="text" />
+      <div className="w-full mb-3 lg:flex lg:justify-between lg:items-center">
+        <InputText
+          id="kecamatan"
+          label="Kecamatan"
+          type="text"
+          className="w-full lg:w-[46.5%]"
+        />
+        <InputText
+          id="kota"
+          label="Kota"
+          type="text"
+          className="w-full lg:w-[46.5%]"
+        />
       </div>
       <InputText id="kewarganegaraan" label="Kewarganegaraan" type="text" />
     </div>
