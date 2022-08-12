@@ -14,4 +14,7 @@
   .shadow-grey {
     box-shadow: 0 0 0 8px #2b4865;
   }
+  .shadow-error {
+    box-shadow: 0 0 0 8px red;
+  }
 }

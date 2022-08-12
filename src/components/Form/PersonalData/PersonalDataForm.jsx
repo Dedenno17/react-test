@@ -17,6 +17,10 @@ import { userDataActions } from "../../../features/userData-slice";
 const PersonalDataForm = (props) => {
   const dispatch = useDispatch();
 
+  // state error
+  const [error, setError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+
   // semua state input
   const [namaDepan, setNamaDepan] = useState("");
   const [namaBelakang, setNamaBelakang] = useState("");
@@ -72,6 +76,44 @@ const PersonalDataForm = (props) => {
   // submit handler form personal
   const nextButtonHandler = (event) => {
     event.preventDefault();
+
+    let namaDepanIsValid = namaDepan.trim().length !== 0;
+    let namaBelakangIsValid = namaBelakang.trim().length !== 0;
+    let emailIsValid = email.includes("@");
+    let tempatLahirIsValid = tempatLhr.trim().length !== 0;
+    let hariLahirIsValid = hariLhr.trim().length !== 0;
+    let bulanLahirIsValid = bulanLhr.trim().length !== 0;
+    let tahunLahirIsValid = tahunLhr.trim().length !== 0;
+    let genderIsValid = gender.trim().length !== 0;
+    let alamatIsValid = alamat.trim().length !== 0;
+    let kecamatanIsValid = kecamatan.trim().length !== 0;
+    let kotaIsValid = kota.trim().length !== 0;
+    let kewarganegaraanIsValid = kewarganegaraan.trim().length !== 0;
+
+    let formIsValid;
+
+    if (
+      namaDepanIsValid &&
+      namaBelakangIsValid &&
+      emailIsValid &&
+      tempatLahirIsValid &&
+      hariLahirIsValid &&
+      bulanLahirIsValid &&
+      tahunLahirIsValid &&
+      genderIsValid &&
+      alamatIsValid &&
+      kecamatanIsValid &&
+      kotaIsValid &&
+      kewarganegaraanIsValid
+    ) {
+      formIsValid = true;
+    }
+
+    if (!formIsValid) {
+      setError(true);
+      setErrorMessage("Seluruh form harus diisi!");
+      return;
+    }
 
     const userData = {
       namaDepan,
@@ -208,6 +250,11 @@ const PersonalDataForm = (props) => {
         value={kewarganegaraan}
         onChange={changeKewarganegaraan}
       />
+      {error && (
+        <p className="text-left text-red-500 text-sm font-bold mt-5">
+          {errorMessage}
+        </p>
+      )}
       <div className="w-full mt-8 lg:flex lg:justify-end lg:items-center">
         <Button
           className="w-full bg-tosca text-grey lg:w-[20%] hover:brightness-95"
