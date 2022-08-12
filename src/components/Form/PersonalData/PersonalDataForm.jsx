@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import InputText from "../../UI/InputText";
 import RadioButton from "../../UI/RadioButton";
@@ -13,9 +13,13 @@ import { tahun } from "../../../data/tahun";
 
 import { formToShowActions } from "../../../features/formToShow-slice";
 import { userDataActions } from "../../../features/userData-slice";
+import { makeId } from "../../../helpers/makeId";
 
 const PersonalDataForm = (props) => {
   const dispatch = useDispatch();
+
+  // memanggil users state untuk mengetahui length nya, akan dipakai no urut id
+  const allUser = useSelector((state) => state.users.users);
 
   // state error
   const [error, setError] = useState(false);
@@ -77,21 +81,22 @@ const PersonalDataForm = (props) => {
   const nextButtonHandler = (event) => {
     event.preventDefault();
 
-    let namaDepanIsValid = namaDepan.trim().length !== 0;
-    let namaBelakangIsValid = namaBelakang.trim().length !== 0;
-    let emailIsValid = email.includes("@");
-    let tempatLahirIsValid = tempatLhr.trim().length !== 0;
-    let hariLahirIsValid = hariLhr.trim().length !== 0;
-    let bulanLahirIsValid = bulanLhr.trim().length !== 0;
-    let tahunLahirIsValid = tahunLhr.trim().length !== 0;
-    let genderIsValid = gender.trim().length !== 0;
-    let alamatIsValid = alamat.trim().length !== 0;
-    let kecamatanIsValid = kecamatan.trim().length !== 0;
-    let kotaIsValid = kota.trim().length !== 0;
-    let kewarganegaraanIsValid = kewarganegaraan.trim().length !== 0;
+    const namaDepanIsValid = namaDepan.trim().length !== 0;
+    const namaBelakangIsValid = namaBelakang.trim().length !== 0;
+    const emailIsValid = email.includes("@");
+    const tempatLahirIsValid = tempatLhr.trim().length !== 0;
+    const hariLahirIsValid = hariLhr.trim().length !== 0;
+    const bulanLahirIsValid = bulanLhr.trim().length !== 0;
+    const tahunLahirIsValid = tahunLhr.trim().length !== 0;
+    const genderIsValid = gender.trim().length !== 0;
+    const alamatIsValid = alamat.trim().length !== 0;
+    const kecamatanIsValid = kecamatan.trim().length !== 0;
+    const kotaIsValid = kota.trim().length !== 0;
+    const kewarganegaraanIsValid = kewarganegaraan.trim().length !== 0;
 
     let formIsValid;
 
+    // memvalidasi seluruh inputan
     if (
       namaDepanIsValid &&
       namaBelakangIsValid &&
@@ -115,7 +120,12 @@ const PersonalDataForm = (props) => {
       return;
     }
 
+    // membuat format id
+    const id = makeId(allUser.length + 1);
+
+    // membuat object user baru
     const userData = {
+      id,
       namaDepan,
       namaBelakang,
       email,
