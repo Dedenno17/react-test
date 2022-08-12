@@ -11,6 +11,8 @@ const Keahlian = () => {
 
   const [keahlian, setKeahlian] = useState([]);
   const [keahlianInput, setKeahlianInput] = useState("");
+  const [error, setError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const changeKeahlianInput = (event) => {
     setKeahlianInput(event.target.value);
@@ -25,6 +27,12 @@ const Keahlian = () => {
   };
 
   const nextButtonHandler = () => {
+    if (keahlian.length === 0) {
+      setError(true);
+      setErrorMessage("Setidaknya masukan satu keahlian");
+      return;
+    }
+
     dispatch(userDataActions.addKeahlian(keahlian));
     dispatch(formToShowActions.resetForm());
   };
@@ -54,9 +62,14 @@ const Keahlian = () => {
           </Button>
         </div>
       </form>
-      {keahlian.length === 0 && (
+      {keahlian.length === 0 && !error && (
         <p className="text-center text-slate-800 font-bold mt-5">
           Belum ada keahlian
+        </p>
+      )}
+      {error && keahlian.length === 0 && (
+        <p className="text-center text-red-400 font-bold mt-5">
+          {errorMessage}
         </p>
       )}
       {keahlian.length !== 0 && <KeahlianList data={keahlian} />}
