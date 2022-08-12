@@ -1,7 +1,11 @@
+import { useSelector } from "react-redux";
+
 import TableData from "../components/TableData/TableData";
 import Button from "../components/UI/Button";
 
 const Home = () => {
+  const userData = useSelector((state) => state.userData.data);
+
   return (
     <div className="w-full h-[100vh] flex flex-col items-center px-4 lg:w-[1024px] lg:m-auto">
       <div className="flex flex-col justify-between items-center py-4 w-full mt-6 md:flex-row">

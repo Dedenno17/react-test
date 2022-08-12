@@ -7,7 +7,9 @@ const initialStateValue = {
     namaBelakang: "",
     email: "",
     tempatLahir: "",
+    bulanLahir: "",
     tanggalLahir: "",
+    tahunLahir: "",
     gender: "",
     alamat: "",
     kecamatan: "",
@@ -48,8 +50,10 @@ export const userDataSlice = createSlice({
       state.data.namaDepan = action.payload.namaDepan;
       state.data.namaBelakang = action.payload.namaBelakang;
       state.data.email = action.payload.email;
+      state.data.bulanLahir = action.payload.bulanLahir;
       state.data.tempatLahir = action.payload.tempatLahir;
       state.data.tanggalLahir = action.payload.tanggalLahir;
+      state.data.tahunLahir = action.payload.tahunLahir;
       state.data.gender = action.payload.gender;
       state.data.alamat = action.payload.alamat;
       state.data.kecamatan = action.payload.kecamatan;
