@@ -4,7 +4,7 @@ import TableData from "../components/TableData/TableData";
 import Button from "../components/UI/Button";
 
 const Home = () => {
-  const userData = useSelector((state) => state.userData.data);
+  // const userData = useSelector((state) => state.userData.data);
 
   return (
     <div className="w-full h-[100vh] flex flex-col items-center px-4 lg:w-[1024px] lg:m-auto">
