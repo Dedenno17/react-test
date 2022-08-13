@@ -1,19 +1,21 @@
-import { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 import TableData from "../components/TableData/TableData";
 import Button from "../components/UI/Button";
 import { userDataActions } from "../features/userData-slice";
+import { formToShowActions } from "../features/formToShow-slice";
 
 const Home = () => {
-  const users = useSelector((state) => state.users.users);
-
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-  useEffect(() => {
-    console.log(users);
+  const moveToSubmissionFormHandler = () => {
+    dispatch(formToShowActions.resetForm());
     dispatch(userDataActions.deleteData());
-  }, [users, dispatch]);
+
+    navigate("/add");
+  };
 
   return (
     <div className="w-full h-[100vh] flex flex-col items-center px-4 lg:w-[1024px] lg:m-auto">
@@ -24,6 +26,7 @@ const Home = () => {
         <Button
           className="bg-grey text-slate-100 w-full md:w-[20%] lg:w-[15%]"
           type="button"
+          onClick={moveToSubmissionFormHandler}
         >
           + Add
         </Button>

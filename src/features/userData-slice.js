@@ -41,10 +41,8 @@ export const userDataSlice = createSlice({
       state.data.kewarganegaraan = action.payload.kewarganegaraan;
     },
     addPendidikan: (state, action) => {
-      state.data.riwayatPendidikan = [
-        ...state.data.riwayatPendidikan,
-        action.payload,
-      ];
+      const newPendidikan = [...state.data.riwayatPendidikan, action.payload];
+      state.data.riwayatPendidikan = newPendidikan;
     },
     addPengalaman: (state, action) => {
       const newPengalaman = [...state.data.pengalamanKerja, action.payload];
@@ -55,7 +53,7 @@ export const userDataSlice = createSlice({
       state.data.keahlian = newKeahlian;
     },
     deleteData: (state) => {
-      state.data = initialStateValue;
+      state.data = initialStateValue.data;
     },
   },
 });

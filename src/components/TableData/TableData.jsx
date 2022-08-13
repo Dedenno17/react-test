@@ -1,10 +1,8 @@
-const DUMMY__DATA = [
-  { id: "p1", name: "Jackson", alamat: "Serdang" },
-  { id: "p2", name: "Lily", alamat: "Nalagati" },
-  { id: "p3", name: "Ross", alamat: "Pabuaran" },
-];
+import { useSelector } from "react-redux";
 
-const TableData = () => {
+const TableData = (props) => {
+  const users = useSelector((state) => state.users.users);
+
   return (
     <div className="w-full">
       <table className="border-collapse w-full">
@@ -23,7 +21,7 @@ const TableData = () => {
           </tr>
         </thead>
         <tbody>
-          {DUMMY__DATA.map((item, i) => (
+          {users.map((item, i) => (
             <tr
               key={item.id}
               className={
@@ -33,7 +31,9 @@ const TableData = () => {
               }
             >
               <td className="border-[1px] border-[#ddd] p-2">{item.id}</td>
-              <td className="border-[1px] border-[#ddd] p-2">{item.name}</td>
+              <td className="border-[1px] border-[#ddd] p-2">
+                {item.namaDepan} {item.namaBelakang}
+              </td>
               <td className="border-[1px] border-[#ddd] p-2">{item.alamat}</td>
               <td className="border-[1px] border-[#ddd] p-2  text-center">
                 <i className="fa-solid fa-eye cursor-pointer"></i>
