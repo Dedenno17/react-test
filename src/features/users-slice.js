@@ -12,6 +12,9 @@ export const usersSlice = createSlice({
       const newUsers = [...state.users, action.payload];
       state.users = newUsers;
     },
+    setUsers: (state, action) => {
+      state.users = action.payload;
+    },
   },
 });
 

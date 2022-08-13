@@ -40,8 +40,13 @@ const Keahlian = () => {
 
     // memasukan keahlian ke userData
     dispatch(userDataActions.addKeahlian(keahlian));
-    // memasukan userData ke users global
-    dispatch(usersActions.addUsers(userData));
+
+    setTimeout(() => {
+      // memasukan userData ke users global
+      dispatch(usersActions.addUsers(userData));
+
+      console.log("user");
+    }, 500);
 
     setTimeout(() => {
       // meridirect ke halaman home

@@ -53,6 +53,13 @@ const TableData = (props) => {
               </td>
             </tr>
           ))}
+          {!users && (
+            <tr className="bg-slate-100  text-slate-400">
+              <td colSpan="4" className="p-4 text-center">
+                Belum ada users
+              </td>
+            </tr>
+          )}
         </tbody>
       </table>
     </div>

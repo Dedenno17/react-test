@@ -49,8 +49,7 @@ export const userDataSlice = createSlice({
       state.data.pengalamanKerja = newPengalaman;
     },
     addKeahlian: (state, action) => {
-      const newKeahlian = [...state.data.keahlian, ...action.payload];
-      state.data.keahlian = newKeahlian;
+      state.data.keahlian = action.payload;
     },
     deleteData: (state) => {
       state.data = initialStateValue.data;
