@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 import TableData from "../components/TableData/TableData";
@@ -12,8 +12,6 @@ const Home = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const users = useSelector((state) => state.users.users);
-
   const moveToSubmissionFormHandler = () => {
     dispatch(formToShowActions.resetForm());
     dispatch(userDataActions.deleteData());
@@ -25,10 +23,6 @@ const Home = () => {
     const allUsers = JSON.parse(window.localStorage.getItem("users"));
     dispatch(usersActions.setUsers(allUsers));
   }, [dispatch]);
-
-  useEffect(() => {
-    console.log(users);
-  }, [users]);
 
   return (
     <div className="w-full h-[100vh] flex flex-col items-center px-4 lg:w-[1024px] lg:m-auto">

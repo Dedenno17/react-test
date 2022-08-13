@@ -32,6 +32,8 @@ const Keahlian = () => {
     setKeahlian((prevState) => {
       return [...prevState, keahlianInput];
     });
+
+    setKeahlianInput("");
   };
 
   const nextButtonHandler = () => {

@@ -1,5 +1,5 @@
 const KeahlianUser = (props) => {
-  const keahlian = props.dataUser.keahlian.join(" ");
+  const keahlian = props.dataUser.keahlian.join(", ");
 
   return (
     <div className="w-full mt-5">

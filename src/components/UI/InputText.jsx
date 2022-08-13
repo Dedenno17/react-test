@@ -12,6 +12,8 @@ const InputText = (props) => {
         type={props.type}
         id={props.id}
         placeholder={props.label}
+        min={props.min}
+        max={props.max}
         className="w-full px-3 py-3 rounded-md outline-none border-none mt-2"
       />
     </div>

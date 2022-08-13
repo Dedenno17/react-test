@@ -95,6 +95,8 @@ const RiwayatPendidikan = () => {
             className="w-[65%]"
             value={nilaiAkhir}
             onChange={changeNilaiAkhir}
+            min="0"
+            max="10"
           />
           <SelectOption
             className="w-[30%] mt-5"
@@ -171,6 +173,8 @@ const RiwayatPendidikan = () => {
             className="w-[65%]"
             value={nilaiAkhir2}
             onChange={changeNilaiAkhir2}
+            min="0"
+            max="10"
           />
           <SelectOption
             className="w-[30%] mt-5"

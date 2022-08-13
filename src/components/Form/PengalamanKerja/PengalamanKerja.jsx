@@ -86,7 +86,7 @@ const PengalamanKerja = () => {
   };
 
   const content1 = (
-    <div className="flex flex-col">
+    <div className="flex flex-col w-full lg:w-[46.5%]">
       <InputText
         id="posisi"
         label="Posisi"
@@ -159,7 +159,7 @@ const PengalamanKerja = () => {
   );
 
   const content2 = (
-    <div className="flex flex-col">
+    <div className="flex flex-col  w-full lg:w-[46.5%] lg:mt-0">
       <InputText
         id="posisi"
         label="Posisi"
