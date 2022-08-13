@@ -1,13 +1,17 @@
-import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 import Button from "../../UI/Button";
 import KeahlianList from "./KeahlianList";
-import { formToShowActions } from "../../../features/formToShow-slice";
 import { userDataActions } from "../../../features/userData-slice";
+import { usersActions } from "../../../features/users-slice";
 
 const Keahlian = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const userData = useSelector((state) => state.userData.data);
 
   const [keahlian, setKeahlian] = useState([]);
   const [keahlianInput, setKeahlianInput] = useState("");
@@ -33,9 +37,18 @@ const Keahlian = () => {
       return;
     }
 
+    // memasukan keahlian ke userData
     dispatch(userDataActions.addKeahlian(keahlian));
-    dispatch(formToShowActions.resetForm());
+    // memasukan userData ke users global
+    dispatch(usersActions.addUsers(userData));
+
+    setTimeout(() => {
+      // meridirect ke halaman home
+      navigate("/");
+    }, 300);
   };
+
+  useEffect(() => {}, [userData, dispatch, navigate]);
 
   return (
     <div>

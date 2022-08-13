@@ -1,10 +1,19 @@
-import { useSelector } from "react-redux";
+import { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 
 import TableData from "../components/TableData/TableData";
 import Button from "../components/UI/Button";
+import { userDataActions } from "../features/userData-slice";
 
 const Home = () => {
-  // const userData = useSelector((state) => state.userData.data);
+  const users = useSelector((state) => state.users.users);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    console.log(users);
+    dispatch(userDataActions.deleteData());
+  }, [users, dispatch]);
 
   return (
     <div className="w-full h-[100vh] flex flex-col items-center px-4 lg:w-[1024px] lg:m-auto">

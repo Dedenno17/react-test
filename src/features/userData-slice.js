@@ -54,6 +54,9 @@ export const userDataSlice = createSlice({
       const newKeahlian = [...state.data.keahlian, ...action.payload];
       state.data.keahlian = newKeahlian;
     },
+    deleteData: (state) => {
+      state.data = initialStateValue;
+    },
   },
 });
 
