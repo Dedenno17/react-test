@@ -7,8 +7,6 @@ const TableData = (props) => {
   useEffect(() => {
     const allUser = JSON.parse(window.localStorage.getItem("users"));
     setUsers(allUser);
-
-    // localStorage.removeItem("users");
   }, []);
 
   const navigate = useNavigate();
