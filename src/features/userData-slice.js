@@ -15,17 +15,7 @@ const initialStateValue = {
     kecamatan: "",
     kota: "",
     kewarganegaraan: "",
-    riwayatPendidikan: [
-      {
-        id: "",
-        institusi: "",
-        nilaiAkhir: "",
-        indexNilai: "",
-        jenjangPendidikan: "",
-        tahunLulus: "",
-        jurusan: "",
-      },
-    ],
+    riwayatPendidikan: [],
     pengalamanKerja: [
       {
         id: "",
@@ -61,8 +51,10 @@ export const userDataSlice = createSlice({
       state.data.kewarganegaraan = action.payload.kewarganegaraan;
     },
     addPendidikan: (state, action) => {
-      const newPendidikan = [...state.data.riwayatPendidikan, action.payload];
-      state.data.riwayatPendidikan = newPendidikan;
+      state.data.riwayatPendidikan = [
+        ...state.data.riwayatPendidikan,
+        action.payload,
+      ];
     },
     addPengalaman: (state, action) => {
       const newPengalaman = [...state.data.pengalamanKerja, action.payload];

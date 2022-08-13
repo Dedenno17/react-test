@@ -141,7 +141,7 @@ const PersonalDataForm = (props) => {
     };
 
     dispatch(userDataActions.addPersonal(userData));
-    dispatch(formToShowActions.nextForm());
+    dispatch(formToShowActions.nextForm(2));
   };
 
   return (

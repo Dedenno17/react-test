@@ -6,9 +6,9 @@ export const formToShowSlice = createSlice({
   name: "formToShow",
   initialState: initialStateValue,
   reducers: {
-    nextForm: (state) => {
-      state.form.page += 1;
-      state.form.visited += 1;
+    nextForm: (state, action) => {
+      state.form.page = action.payload;
+      state.form.visited = action.payload - 1;
     },
 
     resetForm: (state) => {
