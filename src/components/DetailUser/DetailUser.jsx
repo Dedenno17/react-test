@@ -25,7 +25,7 @@ const DetailUSer = () => {
       {dataUser ? <PengalamanUser dataUser={dataUser} /> : null}
       {dataUser ? <PendidikanUser dataUser={dataUser} /> : null}
       {dataUser ? <KeahlianUser dataUser={dataUser} /> : null}
-      <div className="w-full flex justify-end items-center">
+      <div className="w-full flex justify-end items-center mt-8">
         <Button
           type="button"
           className="bg-tosca text-grey"
