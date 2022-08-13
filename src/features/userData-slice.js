@@ -16,17 +16,7 @@ const initialStateValue = {
     kota: "",
     kewarganegaraan: "",
     riwayatPendidikan: [],
-    pengalamanKerja: [
-      {
-        id: "",
-        posisi: "",
-        namaPerusahaan: "",
-        masuk: "",
-        keluar: "",
-        jabatan: "",
-        gaji: "",
-      },
-    ],
+    pengalamanKerja: [],
     keahlian: [],
   },
 };
