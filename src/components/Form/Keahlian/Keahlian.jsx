@@ -26,6 +26,9 @@ const Keahlian = () => {
   const tambahKeahlian = (event) => {
     event.preventDefault();
 
+    // memasukan keahlian ke userData
+    dispatch(userDataActions.addKeahlian(keahlianInput));
+
     setKeahlian((prevState) => {
       return [...prevState, keahlianInput];
     });
@@ -38,14 +41,9 @@ const Keahlian = () => {
       return;
     }
 
-    // memasukan keahlian ke userData
-    dispatch(userDataActions.addKeahlian(keahlian));
-
     setTimeout(() => {
       // memasukan userData ke users global
       dispatch(usersActions.addUsers(userData));
-
-      console.log("user");
     }, 500);
 
     setTimeout(() => {
