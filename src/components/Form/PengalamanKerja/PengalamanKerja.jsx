@@ -86,7 +86,7 @@ const PengalamanKerja = () => {
   };
 
   const content1 = (
-    <>
+    <div className="flex flex-col">
       <InputText
         id="posisi"
         label="Posisi"
@@ -155,11 +155,11 @@ const PengalamanKerja = () => {
         value={gaji}
         onChange={changeGaji}
       />
-    </>
+    </div>
   );
 
   const content2 = (
-    <>
+    <div className="flex flex-col">
       <InputText
         id="posisi"
         label="Posisi"
@@ -229,7 +229,7 @@ const PengalamanKerja = () => {
         value={gaji2}
         onChange={changeGaji2}
       />
-    </>
+    </div>
   );
 
   const dispatch = useDispatch();

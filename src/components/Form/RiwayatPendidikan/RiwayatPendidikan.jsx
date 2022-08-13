@@ -75,7 +75,7 @@ const RiwayatPendidikan = () => {
   };
 
   const content1 = (
-    <>
+    <div className="flex flex-col">
       <div>
         <InputText
           id="institusi"
@@ -147,11 +147,11 @@ const RiwayatPendidikan = () => {
           onChange={changeJurusan}
         />
       </div>
-    </>
+    </div>
   );
 
   const content2 = (
-    <>
+    <div className="flex flex-col">
       <div className="mt-14 lg:mt-0">
         <InputText
           id="institusi2"
@@ -223,7 +223,7 @@ const RiwayatPendidikan = () => {
           onChange={changeJurusan2}
         />
       </div>
-    </>
+    </div>
   );
 
   const dispatch = useDispatch();
