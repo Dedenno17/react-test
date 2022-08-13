@@ -1,4 +1,5 @@
 import { Route, Routes, BrowserRouter } from "react-router-dom";
+import DetailUserPage from "./pages/DetailUserPage";
 import Home from "./pages/Home";
 import SubmissionForm from "./pages/SubmissionForm";
 
@@ -9,6 +10,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/add" element={<SubmissionForm />} />
+          <Route path="/users/:name" element={<DetailUserPage />} />
         </Routes>
       </div>
     </BrowserRouter>

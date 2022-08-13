@@ -1,5 +1,4 @@
 import { useSelector } from "react-redux";
-import { useEffect } from "react";
 
 import PengalamanKerja from "./PengalamanKerja/PengalamanKerja";
 import PersonalData from "./PersonalData/PersonalData";
@@ -8,11 +7,6 @@ import Keahlian from "./Keahlian/Keahlian";
 
 const Forms = () => {
   const formPage = useSelector((state) => state.formToShow.form.page);
-  const userDataState = useSelector((state) => state.userData.data);
-
-  useEffect(() => {
-    console.log(userDataState);
-  }, [userDataState]);
 
   let content =
     formPage === 1 ? (
