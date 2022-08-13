@@ -24,7 +24,7 @@ const Home = () => {
   useEffect(() => {
     const allUsers = JSON.parse(window.localStorage.getItem("users"));
     dispatch(usersActions.setUsers(allUsers));
-  }, []);
+  }, [dispatch]);
 
   useEffect(() => {
     console.log(users);

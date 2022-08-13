@@ -17,7 +17,7 @@ const DetailUSer = () => {
     const allUser = JSON.parse(window.localStorage.getItem("users"));
     const thisUsers = Array.from(allUser).filter((item) => item.id === id);
     setDataUser(thisUsers[0]);
-  }, []);
+  }, [id]);
 
   return (
     <div className="w-full">

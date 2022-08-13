@@ -7,6 +7,8 @@ import InputText from "../../UI/InputText";
 import SelectOption from "../../UI/SelectOption";
 import { formToShowActions } from "../../../features/formToShow-slice";
 import { userDataActions } from "../../../features/userData-slice";
+import { tahun } from "../../../data/tahun";
+import { jenjangPen } from "../../../data/jenjang";
 
 const RiwayatPendidikan = () => {
   const [error, setError] = useState(false);
@@ -122,7 +124,7 @@ const RiwayatPendidikan = () => {
               className="w-full mt-3"
               name="jenjang"
               label="Jenjang/Strata"
-              options={["S3", "S2", "S1"]}
+              options={jenjangPen}
               value={jenjang}
               onChange={changeJenjang}
             />
@@ -133,7 +135,7 @@ const RiwayatPendidikan = () => {
               className="w-full mt-3"
               name="tahun"
               label="Tahun"
-              options={["2020", "2021", "2022"]}
+              options={tahun}
               value={tahunLulus}
               onChange={changeTahunLulus}
             />
@@ -198,7 +200,7 @@ const RiwayatPendidikan = () => {
               className="w-full mt-3"
               name="jenjang"
               label="Jenjang/Strata"
-              options={["S3", "S2", "S1"]}
+              options={jenjangPen}
               value={jenjang2}
               onChange={changeJenjang2}
             />
@@ -209,7 +211,7 @@ const RiwayatPendidikan = () => {
               className="w-full mt-3"
               name="tahun"
               label="Tahun"
-              options={["2020", "2021", "2022"]}
+              options={tahun}
               value={tahunLulus2}
               onChange={changeTahunLulus2}
             />
