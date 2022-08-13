@@ -1,7 +1,17 @@
-import { useSelector } from "react-redux";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const TableData = (props) => {
-  const users = useSelector((state) => state.users.users);
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    const allUser = JSON.parse(window.localStorage.getItem("users"));
+    setUsers(allUser);
+
+    // localStorage.removeItem("users");
+  }, []);
+
+  const navigate = useNavigate();
 
   return (
     <div className="w-full">
@@ -21,7 +31,7 @@ const TableData = (props) => {
           </tr>
         </thead>
         <tbody>
-          {users.map((item, i) => (
+          {users?.map((item, i) => (
             <tr
               key={item.id}
               className={
@@ -36,7 +46,10 @@ const TableData = (props) => {
               </td>
               <td className="border-[1px] border-[#ddd] p-2">{item.alamat}</td>
               <td className="border-[1px] border-[#ddd] p-2  text-center">
-                <i className="fa-solid fa-eye cursor-pointer"></i>
+                <i
+                  className="fa-solid fa-eye cursor-pointer"
+                  onClick={() => navigate(`/users/${item.id}`)}
+                ></i>
               </td>
             </tr>
           ))}

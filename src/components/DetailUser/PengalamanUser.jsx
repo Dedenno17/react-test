@@ -2,7 +2,7 @@ const PengalamanUser = (props) => {
   return (
     <div className="w-full mt-5">
       <h2 className="text-lg font-bold text-slate-100">Pengalaman Kerja</h2>
-      {props.dataUser.map((item) => (
+      {props.dataUser.pengalamanKerja.map((item) => (
         <div className="w-full mt-3" key={item.id}>
           <div className="w-full">
             <p className="font-ligth text-slate-400 text-sm">

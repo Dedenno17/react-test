@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
@@ -5,6 +6,7 @@ import TableData from "../components/TableData/TableData";
 import Button from "../components/UI/Button";
 import { userDataActions } from "../features/userData-slice";
 import { formToShowActions } from "../features/formToShow-slice";
+import { usersActions } from "../features/users-slice";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -16,6 +18,11 @@ const Home = () => {
 
     navigate("/add");
   };
+
+  useEffect(() => {
+    // const allUsers = JSON.parse(window.localStorage.getItem("users"));
+    // dispatch(usersActions.addUsers(allUsers));
+  }, []);
 
   return (
     <div className="w-full h-[100vh] flex flex-col items-center px-4 lg:w-[1024px] lg:m-auto">

@@ -12,6 +12,7 @@ const Keahlian = () => {
   const navigate = useNavigate();
 
   const userData = useSelector((state) => state.userData.data);
+  const users = useSelector((state) => state.users.users);
 
   const [keahlian, setKeahlian] = useState([]);
   const [keahlianInput, setKeahlianInput] = useState("");
@@ -45,10 +46,13 @@ const Keahlian = () => {
     setTimeout(() => {
       // meridirect ke halaman home
       navigate("/");
-    }, 300);
+    }, 800);
   };
 
-  useEffect(() => {}, [userData, dispatch, navigate]);
+  useEffect(() => {
+    //memasukannya ke local storage
+    window.localStorage.setItem("users", JSON.stringify(users));
+  }, [users]);
 
   return (
     <div>

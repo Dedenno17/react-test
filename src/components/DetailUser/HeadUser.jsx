@@ -10,7 +10,7 @@ const HeadUser = (props) => {
       </div>
       <div className="w-[65%]">
         <h1 className="text-xl font-bold text-slate-100">
-          {props.dataUser.namaDepan} {props.dataUser.namaDepan}
+          {props.dataUser.namaDepan} {props.dataUser.namaBelakang}
         </h1>
         <p className="font-ligth text-slate-400 text-sm">
           {props.dataUser.email}

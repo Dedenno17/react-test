@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useParams, useNavigate } from "react-router-dom";
+import Button from "../UI/Button";
 
 import HeadUser from "./HeadUser";
 import KeahlianUser from "./KeahlianUser";
@@ -8,23 +8,32 @@ import PendidikanUser from "./PendidikanUser";
 import PengalamanUser from "./PengalamanUser";
 
 const DetailUSer = () => {
-  const id = useParams();
+  const { id } = useParams();
 
-  const users = useSelector((state) => state.users.users);
-  const [dataUser, setDataUser] = useState({});
+  const navigate = useNavigate();
+  const [dataUser, setDataUser] = useState(undefined);
 
   useEffect(() => {
-    const thisUsers = users.filter((item) => item.id === id);
+    const allUser = JSON.parse(window.localStorage.getItem("users"));
+    const thisUsers = Array.from(allUser).filter((item) => item.id === id);
     setDataUser(thisUsers[0]);
   }, []);
 
-  console.log(dataUser);
   return (
     <div className="w-full">
-      <HeadUser dataUser={dataUser} />
-      <PengalamanUser dataUser={dataUser} />
-      <PendidikanUser dataUser={dataUser} />
-      <KeahlianUser dataUser={dataUser} />
+      {dataUser ? <HeadUser dataUser={dataUser} /> : null}
+      {dataUser ? <PengalamanUser dataUser={dataUser} /> : null}
+      {dataUser ? <PendidikanUser dataUser={dataUser} /> : null}
+      {dataUser ? <KeahlianUser dataUser={dataUser} /> : null}
+      <div className="w-full flex justify-end items-center">
+        <Button
+          type="button"
+          className="bg-tosca text-grey"
+          onClick={() => navigate("/")}
+        >
+          Back
+        </Button>
+      </div>
     </div>
   );
 };
